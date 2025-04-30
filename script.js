@@ -1,3 +1,1 @@
-function ubahTeks() {
-  document.getElementById("teks").innerText = "Tombol telah diklik!";
-}
+console.log('Hello from JavaScript!');

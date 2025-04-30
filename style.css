@@ -1,81 +1,115 @@
-
-
-h1 {
-  color: #4CAF50;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b3e4eb;
+  text-align: center;
 }
-ul {
-  list-style-type: square; 
-  color: darkblue;
-  font-weight: bold;
-  padding-left: 10px; 
-}
-ol {
-  list-style: upper-roman;  
-  padding-left: 10px; 
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-h2 {
-  font-size: 16px;
-}
-p {
-  font-size: 14px;
-}
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #45a049;
+@font-face {
+  font-family: 'LEMONMILK-Bold';
+  src: url('LEMONMILK-Bold.otf') format('truetype');
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  font-family: 'LEMONMILK-Bold', sans-serif;
 }
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  background-color: white;
+
+h1 {
+  text-align: left;
+  margin-left: 80px;
+}
+/* ========== CSS UTAMA (untuk desktop) ========== */
+
+.page-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-area {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+  border: 2px solid #97dae6;
+  padding: 20px;
+  position: relative;
+  min-height: 200px;
+}
+
+.gambar {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.isi {
+  flex: 1;
+  position: relative;
+}
+
+.tombol {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.tombol:hover {
+  background-color: #2980b9;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #eaf8fa;
+  padding: 20px;
   border-radius: 8px;
 }
-.section-1 {
-  
-  background-color: white;
- 
-}
-.section-2 {
-  background-color: #e0f7fa;
-  
-}
 
-nav {
-  margin-bottom: 20px;
-}
 
-nav a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #4CAF50;
-  font-weight: bold;
-}
+/* ========== MEDIA QUERY UNTUK MOBILE ========== */
 
-p, h1, h2, h3 {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
+@media (max-width: 768px) {
+  .page-layout {
+    flex-direction: column;
+  }
 
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+  }
+
+  .gambar {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .tombol {
+    position: static;
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+}
