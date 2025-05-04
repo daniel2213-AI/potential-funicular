@@ -8,16 +8,40 @@ body {
   src: url('LEMONMILK-Bold.otf') format('truetype');
 }
 
-body {
-  font-family: 'LEMONMILK-Bold', sans-serif;
+h1,
+.typografi p {
+  margin: 0;
 }
 
 h1 {
-  font-size: 50px;
-  text-align: left;
-  margin-left: 80px;
-   color: white;
+  margin-bottom: 8px;
 }
+
+.typografi {
+  margin-top: 0;
+}
+
+
+
+
+  h1 {
+    font-family: 'LEMONMILK-Bold', sans-serif;
+    font-size: 50px;
+    text-align: left;
+    margin-left: 80px;
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  .typografi {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 80px;
+    margin-top: 0;
+    color: white;
+  }
+  
 
 .page-layout {
   display: flex;
@@ -56,20 +80,6 @@ h1 {
   flex: 1;
   position: relative;
 }
-.bawah {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.price {
-  font-size: 18px;
-  color: #2ecc71;
-  font-weight: bold;
-}
 
 .tombol {
   position: absolute;
@@ -83,6 +93,8 @@ h1 {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .tombol:hover {
